@@ -1,0 +1,22 @@
+plugins {
+  id 'application'
+}
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  implementation 'org.apache.avro:avro:1.9.2'
+  implementation 'org.apache.hadoop:hadoop-common:3.3.0'
+  implementation 'org.apache.parquet:parquet-avro:1.11.1'
+  implementation 'org.apache.parquet:parquet-hadoop-bundle:1.11.1'
+}
+
+run {
+  systemProperty 'java.library.path', file("$projectDir/lib/native")
+}
+
+application {
+  mainClass = 'arrow_9177.App'
+}

@@ -1,0 +1,12 @@
+This program writes an example Parquet file that uses LZ4 compression. It uses
+the parquet-mr (Java) implementation of Parquet and the Hadoop lz4 codec.
+
+Requirements:
+
+* GNU Linux
+* Java 8+
+* Gradle
+
+To write to `/tmp/example.parquet`, run the following:
+
+    gradle run --args="/tmp/example.parquet"
